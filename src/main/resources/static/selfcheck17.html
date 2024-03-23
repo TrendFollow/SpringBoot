@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀프체크 17</title>
+</head>
+<body>
+<h1>Hello, <span id="target">World</span>!</h1>
+<input type="text" id="text-input">
+<button id="send-btn">전송</button>
+
+<script>
+    var btn = document.querySelector("#send-btn")
+
+    btn.addEventListener("click",function () {
+        var inp = document.querySelector("#text-input").value;
+        var h1 = document.querySelector("h1");
+
+        h1.innerText = inp;
+
+    })
+
+</script>
+</body>
+</html>
