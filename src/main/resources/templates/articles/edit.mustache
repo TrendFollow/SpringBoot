@@ -1,0 +1,17 @@
+{{>layouts/header}} <!--수정 페이지-->
+<form class="container" action="/articles/update" method="post">
+    <input type="hidden" name="id" value="{{article.id}}">
+    <div class="mb-3">
+        <label class="form-label" for="flabel1">제목</label>
+        <input type="text" id="flabel" class="form-control" name="title" value="{{article.title}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="flabel2">내용</label>
+        <textarea class="form-control" rows="3" name="content">{{article.content}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <!-- 수정페이지에서 Back 누르면 상세 페이지로 이동-->
+    <a href="/articles/{{article.id}}">Back</a>
+</form>
+{{>layouts/footer}}

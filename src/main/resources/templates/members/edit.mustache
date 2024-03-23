@@ -1,0 +1,15 @@
+{{>layouts/header}} <!--수정 화면 > 업데이트 요청-->
+<form class="mb-3" action="/members/update" method="post">
+    <input type="hidden" value="{{member.id}}" name="id">
+    <div>
+        <label class="form-label" for="flabel1">제목</label>
+        <input type="text" id="flabel1" class="form-control" name="title" value="{{member.title}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="flabel2">내용</label>
+        <textarea class="form-control" rows="3" name="content" id="flabel2">{{member.content}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href="/members">Back</a>
+{{>layouts/footer}}

@@ -1,0 +1,14 @@
+{{>layouts/header}} <!--회원가입 화면 > 가입 요청-->
+<form class="mb-3" action="/join" method="post">
+    <div>
+        <label class="form-label" for="flabel1">제목</label>
+        <input type="text" id="flabel1" class="form-control" name="title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="flabel2">내용</label>
+        <textarea class="form-control" rows="3" name="content" id="flabel2"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href="/members">Back</a>
+{{>layouts/footer}}

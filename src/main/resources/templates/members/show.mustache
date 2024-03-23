@@ -1,0 +1,25 @@
+{{>layouts/header}} <!--id 검색에 맞는 회원 목록 조회-->
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#member}}
+    <tr>
+        <th>{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    {{/member}}
+    </tbody>
+</table>
+<a href="/members/{{member.id}}/edit" class="btn btn-success">Edit</a>
+<a href="/members/{{member.id}}/delete" class="btn btn-danger">Delete</a>
+
+&nbsp;&nbsp;&nbsp;
+<a href="/members">Go to member list</a>
+{{>layouts/footer}}
